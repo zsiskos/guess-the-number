@@ -1,2 +1,2 @@
-# guess-the-numer
+# Guess The Number (a game)
 Class project
