@@ -25,7 +25,7 @@ const game = {
     this.biggestNum = parseInt(this.biggestNum);   
     while (isNaN(this.biggestNum)) {
      alert(`That's not a number! Try again.`);
-     this.getBigNum();   
+     return this.getBigNum();   
     } this.getSmallNum();
   },
   
@@ -35,7 +35,7 @@ const game = {
     this.smallestNum = parseInt(this.smallestNum);
       while (isNaN(this.smallestNum)) {
         alert(`That's not a number! Try again.`);
-        this.getSmallNum();
+        return this.getSmallNum();
       } this.checkNums();
   },
     
@@ -46,7 +46,7 @@ const game = {
       this.getBigNum();
       } else if (this.biggestNum < this.smallestNum) {
         alert(`Do you know what SMALLER means? Try again!`);
-        this.getBigNum();
+        return this.getBigNum();
       } else return;
   },
   
@@ -54,7 +54,7 @@ const game = {
   getGuess: function() {
     let guess = null;
     while (guess !== this.secretNum) {
-      guess = prompt(`Enter a number between ${this.smallestNum} and ${this.biggestNum}. Type any letter to quit. ${this.secretNum} `);
+      guess = prompt(`Enter a number between ${this.smallestNum} and ${this.biggestNum}. Type any letter to quit.`);
       guess = parseInt(guess);
       if (isNaN(guess)) {
         alert(`Thanks for playing!`);
